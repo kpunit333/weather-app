@@ -1,0 +1,439 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    /* border: 2px solid red; */
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bold;
+    transition: 0.5s;
+
+}
+
+:root
+{
+    --white-theme0: rgba(255, 255, 255, 1);
+    --white-theme1: rgba(255, 255, 255, 0.8);
+    --white-theme2: rgba(255, 255, 255, 0.6);
+    --white-theme3: rgba(255, 255, 255, 0.4);
+    --white-theme4: rgba(255, 255, 255, 0.2);
+
+    --black-theme0: rgba(0, 0, 0, 1);
+    --black-theme1: rgba(0, 0, 0, 0.8);
+    --black-theme2: rgba(0, 0, 0, 0.6);
+    --black-theme3: rgba(0, 0, 0, 0.4);
+    --black-theme4: rgba(0, 0, 0, 0.2);
+
+    --light-blue1-theme0: rgba(26, 181, 237, 1);
+    --light-blue1-theme1: rgba(26, 181, 237, 0.8);
+    --light-blue1-theme2: rgba(26, 181, 237, 0.6);
+    --light-blue1-theme3: rgba(26, 181, 237, 0.4);
+    --light-blue1-theme4: rgba(26, 181, 237, 0.2);
+
+    --light-blue2-theme0: rgba(26, 115, 248, 1);
+    --light-blue2-theme1: rgba(26, 115, 248, 0.8);
+    --light-blue2-theme2: rgba(26, 115, 248, 0.6);
+    --light-blue2-theme3: rgba(26, 115, 248, 0.4);
+    --light-blue2-theme4: rgba(26, 115, 248, 0.2);
+    
+}
+
+
+
+/* Navbar */
+
+.nav-bar
+{
+    border-bottom: 1px solid var(--light1-theme0);
+    /* border: 2px solid red; */
+    background: linear-gradient(var(--light1-theme0), white, white, white);
+    background: linear-gradient(var(--light1-theme0), white, white);
+    background: linear-gradient(var(--light1-theme1), white); 
+    background: #222e35;
+    background: #111b21;
+
+    color: white;
+}
+
+.main-brand-box
+{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand
+{
+    /* border: 2px solid red; */
+    width: 200px;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 1%;
+}
+
+.brand>h2
+{
+    padding: 0 2%;
+}
+
+.search-box
+{
+    width: 300px;
+    /* border: 2px solid red; */
+    display: flex;
+    flex-flow: row wrap;
+    /* justify-content: space-between; */
+    align-items: center;
+    justify-content: center;
+}
+
+.search-box>input
+{
+    border: none;
+    outline: none;
+    border-bottom: 2px solid var(--light-blue2-theme0);
+    border-radius: 2px;
+    font-weight: lighter;
+    width: 150px;
+    padding: 1% 2%;
+
+    /* background: var(--light1-theme4); */
+    background: transparent;
+    color: aqua;
+
+}
+
+.search-box>input::placeholder
+{
+    color: aqua;
+    font-weight: lighter;
+}
+
+.search-box>button
+{
+    border: 2px solid var(--light-blue2-theme0);
+    border-radius: 2px;
+    background-color: transparent;
+    color: var(--light-blue2-theme0);
+    padding: 1% 2%;
+    margin: 0 0 0 2%;
+
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.search-box>button:hover
+{
+    background: var(--light-blue2-theme0);
+    color: var(--black-theme0);        
+}
+
+.links-box
+{
+    /* border: 2px solid red; */
+    padding: 0.3em 2%;
+    background: #111b21;
+    background: #222e35;
+}
+
+.links-box>a, .links-box>i
+{
+    border-bottom: 5px solid transparent;
+    border-radius: 2px;
+    text-decoration: none;
+    padding: 0.1em 1%;
+    font-weight: bold;
+    color: var(--light-blue1-theme0);
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.links-box>a:hover, .links-box>i:hover
+{
+    /* background: var(--light2-theme0); */
+    /* color: var(--dark-theme0); */
+    border-bottom: 5px solid var(--light-blue1-theme0);
+    /* background: var(--light-blue2-theme0); */
+    /* color: var(--black-theme0); */
+}
+
+body
+{
+    /* border: 5px solid red; */
+    background: linear-gradient(0deg,#191e21,#111b21 );
+    background: #191e21;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* height: 100vh; */
+}
+
+.temp-body
+{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    padding: 2% 4%;
+}
+
+.today-all-box
+{
+    /* border: 2px solid red;       */
+    width: 50%; 
+    height: 80vh;
+}
+
+.today-all-temp
+{
+    border: 2px solid var(--light2-theme0); 
+    border-radius: 5px;
+    background: url(background.jpg) center no-repeat;
+    background: url(https://source.unsplash.com/random/1080x720/?mountain) center no-repeat;
+    background-size: cover;
+
+    padding: 1% 1%;
+}    
+
+.today-main-screen
+{
+    border-radius: 5px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 1% 1%;
+    margin: 1% 1%;
+    background: var(--black-theme2);
+}
+
+.today-info-box
+{
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    width: 40%;
+    display: inline-block;
+    padding: 1% 2%;
+    height: min-content;
+}
+
+.today-place>h2
+{
+    font-size: 2em;
+    color: var(--light-blue2-theme0);
+    color: aqua;    
+}
+
+.today-place>h3
+{
+    font-size: 1.2em;
+    /* color: var(--light-blue2-theme0); */
+    color: rgb(0, 255, 0);
+}
+
+.today-location
+{
+    color: var(--white-theme0);
+}
+
+.today-temp
+{
+    font-size: 2.2em;
+    color: var(--light2-theme0);
+    color: aqua;
+
+}
+
+.today-condition
+{
+    color: var(--white-theme0);
+}
+
+.today-date
+{
+    font-size: 1.2em;
+    color: var(--light2-theme0);
+    color: aqua;
+
+}
+
+.today-desc
+{
+    padding: 1% 2%;
+    margin: 1% 1%;
+    color: var(--white-theme1);
+    background: var(--black-theme2);
+}
+
+.today-icon
+{
+    /* border: 2px solid red; */
+    width: 30%;
+    display: flex;
+}
+
+#today-icon-img
+{
+    /* border: 2px solid red; */
+    width: 100%;
+}
+
+.today-hourly
+{
+    /* border: 2px solid red; */
+    display: flex;
+    flex-direction: row;
+    overflow: auto;
+    padding: 0% 1%;
+    margin: 0% 1%;
+    background: var(--black-theme2);
+}
+
+.today-hourly-card
+{
+    /* border: 2px solid red; */
+    border-right: 2px solid var(--white-theme2);
+    display: inline-block;
+    padding: 1% 3%;
+    margin: 1% 0.5%;
+    font-weight: lighter;
+    color: var(--white-theme0);
+}
+
+.hourly-time
+{
+    border-bottom: 2px solid var(--white-theme0);
+}
+
+.today-other-conditions
+{
+    /* border: 2px solid red; */
+    /* border: 2px solid var(--light-blue2-theme0); */
+    border-radius: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: row;
+
+    background: linear-gradient(180deg, var(--light-blue2-theme2), rgb(34, 38, 68));
+    color: rgba(0, 255, 255, 0.8);
+
+    padding: 1% 1%;
+    margin: 1% 0%;
+}
+
+.other-conditions-card
+{
+    /* border: 2px solid red; */
+    border-radius: 5px;
+    display: inline-block;
+    padding: 2% 4%;
+    margin: 1% 1%;
+    background: var(--black-theme2);
+    font-weight: lighter;
+}
+
+.other-condition-name>i
+{
+    margin: 0 3px;
+}
+
+.other-condition-value
+{
+    font-size: 1.2em;
+    padding: 0 5%;
+}
+
+.forecast-box
+{
+    /* border: 2px solid red; */
+    border-radius: 3px;
+    width: 35%;
+    background: linear-gradient(215deg, var(--light-blue2-theme0), rgb(37, 42, 59));
+    padding: 1% 1%;
+    height: 77vh;
+    overflow-y: auto;
+}
+
+.row
+{
+    /* border: 2px solid red; */
+    display: grid;
+    grid-template-columns: 0.8fr 1fr 0.9fr;
+    text-align: center;
+    margin: 1% 0%;
+    background: var(--black-theme2);
+
+    color: var(--white-theme1);
+    font-weight: lighter;
+}
+
+
+.initial-row-heading
+{
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    height: 85%;
+    text-align: center;
+    background: url(https://wallpapers.com/images/hd/sun-rise-above-the-mountain-kc4rxk95xef397x0.jpg) center no-repeat;
+    background-size: cover;
+    color: var(--white-theme0);
+    padding: 5% 0%;
+    font-size: 1.5em;
+}
+
+.final-row-heading
+{
+    text-align: center;
+}
+
+.row>h5
+{
+    padding: 1em 3%;
+    align-self: center;
+    color: aqua;
+}
+
+.row>h5:nth-child(2)
+{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.row>h5:nth-child(2)>img
+{
+    margin: 0 5px;
+}
+
+::-webkit-scrollbar
+{
+    width: 0;
+}
+
+
+@media only screen and (max-width: 700px)
+{
+    .temp-body
+    {
+        flex-flow: column wrap;
+        justify-content: center;
+    }
+
+    .today-all-box
+    {
+        width: 90%;
+        height: auto;
+        margin: auto auto;
+    }
+
+    .forecast-box
+    {
+        width: 90%;
+        height: auto;
+        margin: 2% auto;
+    }
+}

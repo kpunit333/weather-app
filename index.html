@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+
+    <link rel="shortcut icon" href="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link rel="stylesheet" href="theme-light.css" id="mode">
+    <!-- <link rel="stylesheet" href="theme-dark.ss" id="mode"> -->
+
+</head>
+<body>
+
+    <div class="nav-bar">
+
+        <div class="main-brand-box">
+
+            <div class="brand">
+                <div class="logo-box">
+                    <img src="https://cdn2.iconfinder.com/data/icons/weather-flat-14/64/weather02-512.png" alt="" width="40" height="40">
+                </div>
+                <h2>Weatherly</h2>
+            </div>
+
+            <div class="search-box">
+                <input type="text" id="input-place" placeholder="Search a location &#128269;">
+                <button id="api-search">Search</button>             
+            </div>
+
+        </div>
+
+        <div class="links-box">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <i class="bi bi-moon-stars-fill" id="themebtn"></i>
+        </div>        
+
+    </div>
+
+    <div class="temp-body">
+
+        <div class="today-all-box">
+
+            <div class="today-all-temp">
+
+                <div class="today-main-screen">
+    
+                    <div class="today-info-box">
+        
+                        <div class="today-place">
+                
+                            <h2></h2>
+                            <h3></h3>
+                
+                        </div>
+                        <div class="today-location">
+                
+                            <span></span>
+                
+                        </div>
+                        <div class="today-temp">
+                
+                            <h2>Welcome</h2>
+                
+                
+                        </div>
+                        <div class="today-condition">
+                
+                            <span>to Weatherly</span>
+                
+                        </div>
+                        <div class="today-date">
+                
+                            <h3>Search for your area</h3>
+                
+                        </div>
+                
+                    </div>
+                
+                    <div class="today-icon">
+                        <img src="clear-day.jpg" alt="icon" id="today-icon-img">                
+                    </div>
+
+                    
+                </div>
+                <div class="today-desc">
+                    <p>Search for a location to get weather details.</p>
+                </div>
+
+                <div class="today-hourly">
+
+                    <!-- <div class="today-hourly-card">
+                        <div class="hourly-time">            
+                            <span>00:00</span>
+                        </div>
+                        <div class="hourly-icon">            
+                            <img src="cloudy.jpg" alt="icon" width="40" height="40">            
+                        </div>
+                        <div class="hourly-temp">            
+                            <span>NA</span>            
+                        </div> 
+                    </div> -->
+
+                </div>
+            </div>
+
+        
+            <div class="today-other-conditions">
+        
+                <div class="other-conditions-card" id="humidity">
+                    <div class="other-condition-name">
+
+                        <i class="bi bi-droplet-half"></i>
+                        <span>Humidity</span>
+        
+                    </div>
+                    <div class="other-condition-value">
+                        
+                        <span></span>
+                    </div>
+                </div>
+        
+                <div class="other-conditions-card" id="windspeed">
+                    <div class="other-condition-name">
+
+                        <i class="bi bi-wind"></i>
+                        <span>Windspeed</span>
+        
+                    </div>
+                    <div class="other-condition-value">
+                        
+                        <span></span>
+                    </div>
+                </div>
+        
+                <div class="other-conditions-card" id="airpressure">
+                    <div class="other-condition-name">
+
+                        <i class="bi bi-cloud-haze2-fill"></i>
+                        <span>Air Pressure</span>
+        
+                    </div>
+                    <div class="other-condition-value">
+                        
+                        <span></span>
+                    </div>
+                </div>
+        
+                <div class="other-conditions-card" id="visibility">
+                    <div class="other-condition-name">
+
+                        <i class="bi bi-eye"></i>
+                        <span>Visiblity</span>
+        
+                    </div>
+                    <div class="other-condition-value">
+                        
+                        <span></span>
+                    </div>
+                </div>
+        
+                <div class="other-conditions-card" id="sunrise">
+                    <div class="other-condition-name">
+
+                        <i class="bi bi-brightness-high-fill"></i>
+                        <span>Sunrise</span>
+        
+                    </div>
+                    <div class="other-condition-value">
+                        
+                        <span></span>
+                    </div>
+                </div>
+
+                <div class="other-conditions-card" id="sunset">
+                    <div class="other-condition-name">
+
+                        <i class="bi bi-brightness-alt-high-fill"></i>
+                        <span>Sunset</span>
+        
+                    </div>
+                    <div class="other-condition-value">
+                        
+                        <span></span>
+                    </div>
+                </div>
+        
+            </div>
+
+        </div>
+
+        
+    
+        <div class="forecast-box">
+    
+            <div class="initial-row-heading">
+                <h2>14-day Weather forecast</h2>
+            </div>
+<!--                 
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                
+            <div class="row">
+                <h5>Today</h5>
+                <h5><img src="cloudy.jpg" alt="" width="30"> Conditions</h5>
+                <h5>Temp</h5>
+            </div>
+                 -->
+        </div>
+
+    </div>
+
+
+    
+</body>
+
+<script src="https://code.jquery.com/jquery-3.6.4.js"></script>
+<script src="script.js"></script>
+</html>
